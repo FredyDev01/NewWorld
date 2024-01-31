@@ -11,7 +11,7 @@
         $Apellidos = $_POST['Apellidos'];
         $Telefono = $_POST['Telefono'];
         $Email = $_POST['Email'];
-        //PROCESANDO EL ENVIO DE DATOS AL CORREO
+        // PROCESANDO EL ENVIO DE DATOS AL CORREO
         $Destinatario = "fredy12cbpu@gmail.com";
         $Mailer = new PHPMailer();
         try{                         
@@ -19,7 +19,7 @@
             $Mailer->Host = "smtp.gmail.com";
             $Mailer->SMTPAuth = true;
             $Mailer->Username = $Destinatario;
-            $Mailer->Password = "pwwxatacturmzjnf";
+            $Mailer->Password = "okqqmkvvgfmxnwmv";
             $Mailer->SMTPSecure = "tls";
             $Mailer->Port = 587;                
             $Mailer->setFrom($Email, "$Nombres $Apellidos");
@@ -28,13 +28,16 @@
             $Mailer->msgHTML(true);
             $Mailer->Subject = "Nuevo mundo: Persona interesada.";
             $Mailer->Body = "<h2>Hola soy $Nombres $Apellidos</h2><p>Estoy interesad@ en tu institución, te adjunto mi informacion de contacto: <br><br>Telefono: $Telefono<br>Email: $Email<br><br>Espero que me contactes pronto :D.</p>";
-            $Mailer->send();
-            echo "Response->" . json_encode(array("Estado" => true, "Mensaje" => "El mensaje de su inscripción fue enviado con exito al administrador de la institución, espere una muy pronta respuesta."));
+            $Resultado = $Mailer->send();
+            if(!$Resultado) {
+                throw new Exception($Mailer->ErrorInfo);
+            }
+            echo json_encode(array("Estado" => true, "Mensaje" => "El mensaje de su inscripción fue enviado con exito al administrador de la institución, espere una muy pronta respuesta."));
         }catch(Exception $error){
             echo "Ocurrio un error en el envio: $error";
-            echo "Response->" . json_encode(array("Estado" => false, "Mensaje" => "Nuestra aplicación tiene algunos problemas al tratar de enviar su correo, le recomendamos volver a intentarlo mas tarde."));
+            echo json_encode(array("Estado" => false, "Mensaje" => "Nuestra aplicación tiene algunos problemas al tratar de enviar su correo, le recomendamos volver a intentarlo mas tarde."));
         }
     }else{
-        echo "Response->" . json_encode(array("Estado" => false, "Mensaje" => "Al parcer no todos los campos del formulario fueron llenados con exito, le recomendamos que lo vuelva a intentar sin saltarse los campos necesarios."));
+        echo json_encode(array("Estado" => false, "Mensaje" => "Al parcer no todos los campos del formulario fueron llenados con exito, le recomendamos que lo vuelva a intentar sin saltarse los campos necesarios."));
     }
 ?>

@@ -23,7 +23,7 @@
     </header>
     <article>
         <section class="ctnEsc">
-            <h2>¿Por que escogernos? <hr></h2>
+            <h3>¿Por que escogernos? <hr></h3>
             <main class="escCard">
                 <div class="escCardItem">
                     <div class="escCardFoto">
@@ -56,7 +56,7 @@
         </section>
         <section class="ctnHis" id="Historia">            
             <div class="hisContent">
-                <h2>Nuestra historia <hr></h2>                
+                <h3>Nuestra historia <hr></h3>                
                 <img src="./resources/assets/ConstColegio.png" alt="Construccion-colegio">
                 <p>
                     En los años 1988 iniciamos con el proyecto "Nuevo mundo", que se centra en la eduación particular de los niños y jovenes a nivel nacional, dicho transcurso nos tomo alrededor de 10 años en los cuales pudimos implementar el nivel de primaria y inicial, al poco tiempo de eso nos hicimos con el recurso suficiente para implementar el area de secundaria.<br><br>
@@ -66,7 +66,7 @@
             <img src="./resources/assets/ConstColegio.png" alt="Construccion-colegio">                                                            
         </section>
         <section class="cntTes">
-            <h2>Testimonio de padres <hr></h2>
+            <h3>Testimonio de padres <hr></h3>
             <main class="splide" aria-label="Carrusel con Splide">
                 <div class="splide__track">
                     <ul class="splide__list">
@@ -123,7 +123,7 @@
             </main>
         </section>
         <section class="ctnDud">
-            <h2>Preguntas frecuentes <hr></h2>
+            <h3>Preguntas frecuentes <hr></h3>
             <main class="dudAcord">
                 <div class="dudItem">
                     <input type="radio" id="Acord-1" class="dudOpen" name="AcordSelect">

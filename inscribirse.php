@@ -8,7 +8,7 @@
     <link rel="icon" href="./resources/assets/LogoPrincipal.png">    
     <title>NuevoMundo - Inscribirse</title>
 </head>
-<body style="background: red;">
+<bodys>
     <?php 
         $Seccion = 'Inscribirse';
         include('./templates/menu.php') 
@@ -19,15 +19,15 @@
             <div class="CtnLog">
                 <img src="./resources/assets/LogoForm.png" alt="LogoLogin" title="Logo">
             </div>
-            <h2>Nuevo interesado <hr></h2>
+            <h3>Nuevo interesado <hr></h3>
             <p>Bienvenidos al formulario de la I.E "Nuevo mundo".</p>
             <div class="CtnInp">            
-                <input type="text" name="Nombres" id="txtNom" class="Inp"  placeholder="Nombres:">                                
+                <input type="text" name="Nombres" class="Inp"  placeholder="Nombres:">                                
                 <span class="Message Success">Los nombres se llenaron de forma correcta.</span>
                 <span class="Message Error">Nombres no tiene los caracteres suficientes.</span>
             </div>            
             <div class="CtnInp">
-                <input type="text" name="Apellidos" id="txtApe" class="Inp" placeholder="Apellidos:">                
+                <input type="text" name="Apellidos" class="Inp" placeholder="Apellidos:">                
                 <span class="Message Success">Los apellidos se llenaron de forma correcta.</span>
                 <span class="Message Error">Apellidos no tiene los caracteres suficientes.</span>
             </div>
@@ -37,7 +37,7 @@
                 <span class="Message Error">Telefono no tiene 9 caracteres o contiene letras.</span>
             </div>
             <div class="CtnInp">                            
-                <input type="email" name="Email" id="txtEma" class="Inp" placeholder="Email:">                            
+                <input type="email" name="Email" class="Inp" placeholder="Email:">                            
                 <span class="Message Success">El email se lleno de forma correcta.</span>
                 <span class="Message Error">Email se encuentra vacio o no tiene el '@ - .com'.</span>            
             </div>
